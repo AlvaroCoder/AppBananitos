@@ -3,3 +3,9 @@
 
 .env
 /env
+
+/fly.toml
+.dockerignore
+Dockerfile
+/Dockerfile
+./Dockerfile
