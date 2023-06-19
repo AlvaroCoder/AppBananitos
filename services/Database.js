@@ -22,8 +22,8 @@ const RegisterModel = {
     },
     createRegister : async (data)=>{
         try{
-            const {evaluador, nroPlantas, fechaCreacion} = data
-            const id = await pool.execute(CREATE_REGISTER, [evaluador, nroPlantas, fechaCreacion]).then((res)=>res[0].insertId);
+            const {evaluador, nroPlantas, fechaCreacion, ubicacion} = data
+            const id = await pool.execute(CREATE_REGISTER, [evaluador, nroPlantas, ubicacion,fechaCreacion]).then((res)=>res[0].insertId);
             return {
                 err : false,
                 message : id
